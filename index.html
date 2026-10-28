@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Site personnel du Professeur Ali Choukri : enseignement, recherche et intelligence artificielle à l'Université Ibn Tofail.">
+  <title>Prof. Ali Choukri | Informatique et Intelligence Artificielle</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #1769aa;
+      --light: #f3f7fb;
+      --text: #243447;
+      --muted: #62748a;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 12px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .topbar a {
+      color: white;
+      margin-left: 18px;
+      font-size: .95rem;
+    }
+
+    .hero {
+      color: white;
+      padding: 76px 6% 68px;
+      background: linear-gradient(125deg, #102a43, #1769aa);
+    }
+
+    .hero-content {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .82rem;
+      color: #c7e5ff;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.7rem);
+      line-height: 1.15;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      font-size: 1.12rem;
+      color: #e5eff8;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-secondary {
+      border: 1px solid #d7eaff;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 38px 22px 60px;
+    }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .about {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px #102a430b;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #e2eaf2;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px #102a4312;
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 10px 0;
+    }
+
+    .course-card {
+      border-top: 4px solid var(--blue);
+    }
+
+    .course-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 700;
+    }
+
+    .contact {
+      background: #e5eff8;
+      padding: 28px;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      background: var(--navy);
+      color: #dce8f3;
+      padding: 25px 18px;
+      font-size: .92rem;
+    }
+
+    footer p {
+      margin: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .topbar {
+        justify-content: center;
+      }
+
+      .topbar nav {
+        text-align: center;
+      }
+
+      .topbar a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">Ali Choukri | Université Ibn Tofail</div>
+    <nav aria-label="Navigation principale">
+      <a href="#accueil">Accueil</a>
+      <a href="#profil">Profil</a>
+      <a href="#recherche">Recherche</a>
+      <a href="#enseignement">Enseignement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="accueil">
+    <div class="hero-content">
+      <div class="eyebrow">Informatique · Intelligence artificielle</div>
+      <h1>Professeur Ali CHOUKRI</h1>
+      <p>
+        Enseignement supérieur, recherche scientifique et développement
+        de systèmes intelligents.
+      </p>
+      <p>
+        Faculté des Sciences de Kénitra<br>
+        Université Ibn Tofail — Maroc
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary"
+           href="https://alichoukri-fsk.github.io/Cours/">
+          📚 Accéder aux cours
+        </a>
+        <a class="btn btn-secondary" href="#recherche">
+          Découvrir mes recherches
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section id="profil">
+      <div class="section-heading">
+        <h2>Profil académique</h2>
+        <p>Enseignement supérieur et recherche en informatique.</p>
+      </div>
+
+      <div class="about">
+        <p>
+          Je suis professeur d'informatique à la Faculté des Sciences
+          de Kénitra, Université Ibn Tofail, au Maroc. Mes activités
+          portent sur l'enseignement universitaire, l'encadrement
+          de projets et la recherche en intelligence artificielle.
+        </p>
+        <p>
+          Je participe également à la coordination de formations
+          universitaires en intelligence artificielle et en ingénierie
+          des systèmes intelligents.
+        </p>
+      </div>
+    </section>
+
+    <section id="recherche">
+      <div class="section-heading">
+        <h2>Axes de recherche</h2>
+        <p>Principaux domaines scientifiques d'intérêt.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🧠</div>
+          <h3>Intelligence artificielle</h3>
+          <p>
+            Apprentissage automatique, apprentissage profond,
+            classification et systèmes prédictifs.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">👁️</div>
+          <h3>Vision par ordinateur</h3>
+          <p>
+            Reconnaissance de formes, analyse d'images,
+            reconnaissance faciale et analyse des expressions.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">🏥</div>
+          <h3>IA pour la santé</h3>
+          <p>
+            Analyse d'images médicales et développement
+            de méthodes intelligentes d'aide au diagnostic.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="icon">⚛️</div>
+          <h3>IA et calcul quantique</h3>
+          <p>
+            Exploration des approches hybrides associant
+            apprentissage automatique et informatique quantique.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="enseignement">
+      <div class="section-heading">
+        <h2>Enseignement</h2>
+        <p>Supports pédagogiques et ressources pour les étudiants.</p>
+      </div>
+
+      <div class="grid">
+        <article class="card course-card">
+          <div class="icon">📘</div>
+          <h3>Espace des cours</h3>
+          <p>
+            Retrouvez les supports de cours, les chapitres,
+            les travaux pratiques, les exercices et les autres
+            ressources pédagogiques disponibles.
+          </p>
+          <a class="course-link"
+             href="https://alichoukri-fsk.github.io/Cours/">
+            Consulter les cours →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3>Travaux pratiques</h3>
+          <p>
+            Exercices de programmation, notebooks,
+            applications et mises en pratique des concepts étudiés.
+          </p>
+          <a class="course-link"
+             href="https://alichoukri-fsk.github.io/Cours/">
+            Accéder aux ressources →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="icon">🎓</div>
+          <h3>Master ISI</h3>
+          <p>
+            Ressources pédagogiques liées à l'intelligence artificielle,
+            à la science des données et aux systèmes intelligents.
+          </p>
+          <a class="course-link"
+             href="https://alichoukri-fsk.github.io/Cours/">
+            Voir les cours →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-heading">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact">
+        <p><strong>Prof. Ali CHOUKRI</strong></p>
+        <p>Faculté des Sciences de Kénitra</p>
+        <p>Université Ibn Tofail, Maroc</p>
+        <p>
+          Courriel :
+          <a href="mailto:ali.choukri@uit.ac.ma">
+            ali.choukri@uit.ac.ma
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Prof. Ali CHOUKRI — Informatique et Intelligence artificielle</p>
+    <p>Faculté des Sciences de Kénitra · Université Ibn Tofail</p>
+  </footer>
+
+</body>
+</html>
